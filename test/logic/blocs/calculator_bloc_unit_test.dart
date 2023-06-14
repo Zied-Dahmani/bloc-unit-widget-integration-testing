@@ -16,21 +16,21 @@ void main() {
     });
 
     blocTest<CalculatorBloc, CalculatorState>(
-      'emits [ClaculatorResultSuccessful(10.0)] when addButtonTapped(5, 5) is added.',
+      'emits [CalculatorResultSuccessful(10.0)] when addButtonTapped(5, 5) is added.',
       build: () => calculatorBloc,
       act: (bloc) => bloc.add(const AddButtonTapped(5, 5)),
       expect: () => const <CalculatorState>[CalculatorResultSuccessful(10.0)],
     );
 
     blocTest<CalculatorBloc, CalculatorState>(
-      'emits [ClaculatorResultSuccessful(0.0)] when SubtractButtonTapped(5, 5) is added.',
+      'emits [CalculatorResultSuccessful(0.0)] when SubtractButtonTapped(5, 5) is added.',
       build: () => calculatorBloc,
       act: (bloc) => bloc.add(const SubtractButtonTapped(5, 5)),
       expect: () => const <CalculatorState>[CalculatorResultSuccessful(0.0)],
     );
 
     blocTest<CalculatorBloc, CalculatorState>(
-      'emits [ClaculatorResultSuccessful(25.0)] when MultiplyButtonTapped(5, 5) is added.',
+      'emits [CalculatorResultSuccessful(25.0)] when MultiplyButtonTapped(5, 5) is added.',
       build: () => calculatorBloc,
       act: (bloc) => bloc.add(const MultiplyButtonTapped(5, 5)),
       expect: () => const <CalculatorState>[CalculatorResultSuccessful(25.0)],

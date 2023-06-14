@@ -24,10 +24,10 @@ class CalculatorResultSuccessful extends CalculatorState {
   List<Object> get props => [result];
 }
 
-class ClaculatorResultFailure extends CalculatorState {
+class CalculatorResultFailure extends CalculatorState {
   final String message;
 
-  const ClaculatorResultFailure(this.message);
+  const CalculatorResultFailure(this.message);
 
   @override
   List<Object> get props => [message];

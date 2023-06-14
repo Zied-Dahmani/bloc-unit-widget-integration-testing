@@ -21,7 +21,7 @@ class CalculatorScreen extends StatelessWidget {
             children: [
               BlocBuilder<CalculatorBloc, CalculatorState>(
                 builder: (context, state) {
-                  if (state is ClaculatorResultFailure) {
+                  if (state is CalculatorResultFailure) {
                     return resultText(state.message, context);
                   } else if (state is CalculatorResultSuccessful) {
                     return resultText(state.result.toString(), context);
